@@ -1,7 +1,6 @@
 ---
 title: "rm_h5se"
 author: "Sean Maden"
-date: "3/27/2020"
 output: html_document
 ---
 
@@ -9,7 +8,7 @@ Recount Methylation data are contained in 3 directories, `h5se_rg`, `h5_gr`, and
 
 These contain assay files with DNAm data. 
 
-In R, these are handled as objects of class , which utilizes DelayedArray `HDF5-SummarizedExperiment`. 
+In R, these are handled as objects of class `HDF5-SummarizedExperiment`, which utilizes DelayedArray. 
 
 This vignette provides an example workflow compatible with the DelayedArray backend 
 
@@ -23,8 +22,11 @@ First, H5SE test datasets, `h5se_rg_test`, `h5se_gr_test`, and `h5se_gm_test`, c
 
 # Metadata queries
 
-
-
 Next, access the metadata with `minfi::pData(h5se_rg_test)`.
 
 # 
+
+
+
+
+
