@@ -5,15 +5,18 @@ date: "3/27/2020"
 output: html_document
 ---
 
-Download the H5SE objects. These use DelayedArray technology to delay actions on large datasets and speed up analysis. time.
+Key database files are contained in directories `h5se_rg`, `h5_gr`, and `h5_gm`. These contain assay files with DNAm data. In R, these are handled as objects of class , which utilizes DelayedArray `HDF5-SummarizedExperiment`. 
 
-Access H5SE objects as you would `SummarizedExperiment`. 
+This vignette provides an example workflow that  DelayedArray technology to speed up queries of large datasets, such as the  database files. For expediency, this uses a small test dataset, but similar principles apply to the full dataaset objects.
 
-# Example
+# Obtain test datasets
 
-First, the H5SE test object is downloaded as follows:
+First, H5SE test datasets, `h5se_rg_test`, `h5se_gr_test`, and `h5se_gm_test`, can be downloaded from `recount.bio/data`. 
 
-```{r, h5se_test_dl}
-```
+# Metadata queries
 
-Metadata can be summarized 
+
+
+Next, access the metadata with `minfi::pData(h5se_rg_test)`.
+
+# 
