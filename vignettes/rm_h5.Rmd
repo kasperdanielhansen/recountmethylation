@@ -1,5 +1,5 @@
 ---
-title: "User's Guide for `recountmethylation`"
+title: "Utilize HDF5 object `` "
 author:
   - name: Sean K. Maden
     affiliation:
