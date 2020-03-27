@@ -7,7 +7,11 @@ output: html_document
 
 Key database files are contained in directories `h5se_rg`, `h5_gr`, and `h5_gm`. These contain assay files with DNAm data. In R, these are handled as objects of class , which utilizes DelayedArray `HDF5-SummarizedExperiment`. 
 
-This vignette provides an example workflow that  DelayedArray technology to speed up queries of large datasets, such as the  database files. For expediency, this uses a small test dataset, but similar principles apply to the full dataaset objects.
+This vignette provides an example workflow compatible with the DelayedArray backend 
+
+to speed up queries of large datasets, such as the  database files. 
+
+For expediency, this uses a small test , but similar principles apply to the full dataaset objects.
 
 # Obtain test datasets
 
