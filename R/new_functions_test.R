@@ -4,6 +4,20 @@
 
 urltodat = "ftp://recount.bio/data/"
 
+
+#' Get the latest fn
+#'
+#' Get a dataset connection object from an HDF5 database 
+#' ('.h5') file and return the indexed table subset.
+#' @param ri rows indices in dataset.
+#' @param ci columns indices in dataset.
+#' @param dsn Name of dataset or group of dataset to connect with.
+#' @param dbn Path to h5 database file.
+#' @return HDF5 database connection object.
+#' @examples
+#' # get red signal for first 2 probe addresses, first 3 samples
+#' st <- hread(1:3, 1:2, d = "redsignal", dbn = "remethdb2.h5")
+#' @export
 latest_h5se <- function(url = urltodat){
   
   # get filenames list from urltodat
@@ -16,7 +30,7 @@ latest_h5se <- function(url = urltodat){
   return(c(fn1, fn2, fn3))
 }
 
-get_h5se <- function(){
+get_h5se <- function(whichdat = c("all", "rg", "gr", "gm")){
   
   
   
