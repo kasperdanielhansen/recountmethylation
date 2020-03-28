@@ -1,5 +1,21 @@
 #!/usr/bin/env R
 
+# Managing file downloads
+# `RemethDL` class contains metadata for download management of Recount Methylation data.
+
+
+
+# Instantiate RemethDL instance and populate
+rmdl <- list()
+class(rmdl) <- "RemethDL"
+
+
+
+# 
+
+# Get files based on data in 
+
+
 # Utilities for accessing H5SE data
 
 urltodat = "ftp://recount.bio/data/"
@@ -15,8 +31,7 @@ urltodat = "ftp://recount.bio/data/"
 #' @param dbn Path to h5 database file.
 #' @return HDF5 database connection object.
 #' @examples
-#' # get red signal for first 2 probe addresses, first 3 samples
-#' st <- hread(1:3, 1:2, d = "redsignal", dbn = "remethdb2.h5")
+#' fn = latest_h5se()
 #' @export
 latest_h5se <- function(url = urltodat){
   
