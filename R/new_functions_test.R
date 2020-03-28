@@ -9,10 +9,6 @@
 rmdl <- list()
 class(rmdl) <- "RemethDL"
 
-
-
-# 
-
 # Get files based on data in 
 
 
