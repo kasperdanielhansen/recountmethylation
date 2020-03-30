@@ -4,9 +4,7 @@ author: "Sean Maden"
 output: html_document
 ---
 
-Recount Methylation data are contained in 3 directories, `h5se_rg`, `h5_gr`, and `h5_gm`. 
-
-These contain assay files with DNAm data. 
+Recount Methylation data are contained in 3 directories, `h5se_rg`, `h5_gr`, and `h5_gm`. These contain assay files with DNAm data.
 
 In R, these are handled as objects of class `HDF5-SummarizedExperiment`, which utilizes DelayedArray. 
 

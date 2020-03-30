@@ -1,5 +1,19 @@
 #!/usr/bin/env R
 
+
+# functions
+rmdatexists <- function(){return()}
+
+#----------------
+# RemethDL class
+#----------------
+setClass("RemethDL", representation(baseurl = "character")
+         # , contains = "superclass" # check for existing url connector classes
+)
+# methods
+setMethod("check", function(){rmdatexists()})
+
+
 #------------------------
 # Managing file downloads
 #------------------------
