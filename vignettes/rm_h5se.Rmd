@@ -10,9 +10,29 @@ In R, these are handled as objects of class `HDF5-SummarizedExperiment`, which u
 
 For expediency, this uses a small test , but similar principles apply to the full dataaset objects.
 
+# Making the test H5SE object (code not run)
+First, download H5SE data, `h5se_rg_test`, `h5se_gr_test`, and `h5se_gm_test`, can be downloaded from `recount.bio/data`. 
+
+```{r, h5se_test}
+fn <- "remethdb_h5se_gr_00-00-01_1583780004"
+h5se.path <- paste0(".", "recount.bio", "data", fn, collapse = "/")
+
+library(HDF5Array)
+
+HDF5Array::
+```
+
+
 # Obtain test datasets
 
 First, H5SE test datasets, `h5se_rg_test`, `h5se_gr_test`, and `h5se_gm_test`, can be downloaded from `recount.bio/data`. 
+
+```{r}
+library(DelayedArray)
+
+
+```
+
 
 # Metadata queries
 
