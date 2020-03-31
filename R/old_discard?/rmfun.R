@@ -10,3 +10,10 @@ gsub('.*\"', "", gsub('.*\"', "", rd))
 RCurl::getURLContent(url, 
                      ftp.use.epsv = F)
 RCurl::getURL(url)
+
+
+# try rvest
+
+library(rvest)
+
+
