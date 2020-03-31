@@ -1,1 +1,0 @@
-# does validation of se H5SE objects vs. GEO
