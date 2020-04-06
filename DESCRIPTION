@@ -21,6 +21,7 @@ Imports:
     RCurl,
     IlluminaHumanMethylation450kmanifest
 Suggests:
+    devtools,
     knitr,
     testthat,
     IlluminaHumanMethylation450kanno.ilmn12.hg19
