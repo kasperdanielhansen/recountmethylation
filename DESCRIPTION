@@ -10,7 +10,7 @@ License: Artistic-2.0
 Encoding: UTF-8
 URL: https://github.com/metamaden/recountmethylation
 BugReports: https://github.com/metamaden/recountmethylation/issues
-LazyData: FALSE
+LazyData: TRUE
 Imports:
     minfi,
     rhdf5,
@@ -22,5 +22,5 @@ Suggests:
     IlluminaHumanMethylation450kanno.ilmn12.hg19,
     IlluminaHumanMethylation450kmanifest
 VignetteBuilder: knitr
-biocViews: DNAMethylation, Epigenetics, Microarray, MethylationArray
+biocViews: DNAMethylation, Epigenetics, Microarray, MethylationArray, GEO, GDS, CSA
 RoxygenNote: 7.1.0
