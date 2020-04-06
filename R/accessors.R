@@ -175,25 +175,24 @@ gds_idat2rg <- function(gsmvi, rmdl = TRUE, ext = "gz",
 #' @param dbn Path to h5 database file.
 #' @return HDF5 database connection object.
 #' @examples
+#' # notrun
 #' # get red signal for first 2 probe addresses, first 3 samples
-#' st <- hread(1:3, 1:2, d = "redsignal", dbn = "remethdb2.h5")
+#' # st <- hread(1:3, 1:2, d = "redsignal", dbn = "remethdb2.h5")
 #' @export
 hread <- function(ri, ci, dsn = "redsignal", dbn = "remethdb2.h5"){
     return(rhdf5::h5read(dbn, dsn, index = list(ri, ci)))
 }
 
-#' Retrieve available sample metadata
+#' Retrieve HDF5 sample metadata
 #'
-#' Retrieves all sample metadata from an HDF5 database.
+#' Retrieves sample metadata from HDF5 database.
 #'
 #' @param dbn Path to HDF5 database file.
-#' @param dsn Name or group path to HDF5 dataset containing 
-#' the sample metadata and learned annotations.
+#' @param dsn Name or group path to HDF5 dataset containing sample metadata.
 #' @return A `data.frame` of all the sample metadata
 #' @examples 
-#' # get all available sample metadata
-#' mdp <- data_mdpost(dbn = "remethdb2.h5", dsn = "mdpost")
-#' @seealso hread()
+#' # notrun:
+#' # mdp <- data_mdpost(dbn = "remethdb2.h5", dsn = "mdpost")
 #' @export
 data_mdpost <- function(dbn = "remethdb2.h5", dsn = "mdpost"){
     mdp <- as.data.frame(rhdf5::h5read(file = dbn, name = dsn),
@@ -216,17 +215,17 @@ data_mdpost <- function(dbn = "remethdb2.h5", dsn = "mdpost"){
 #' common subset instead
 #' @return A list of the matched datasets.
 #' @examples
+#' # notrun:
 #' # make 2 mismatched datasets
-#' ds1 <- matrix(seq(1, 10, 1), nrow = 5)
-#' ds2 <- matrix(seq(11, 20, 1), nrow = 5)
-#' rownames(ds1) <- rownames(ds2) <- paste0("row", seq(1, 5, 1))
-#' colnames(ds1) <- colnames(ds2) <- paste0("col", c(1, 2))
-#' ds2 <- ds2[rev(seq(1, 5, 1)), c(2, 1)]
-#' 
+#' #ds1 <- matrix(seq(1, 10, 1), nrow = 5)
+#' #ds2 <- matrix(seq(11, 20, 1), nrow = 5)
+#' #rownames(ds1) <- rownames(ds2) <- paste0("row", seq(1, 5, 1))
+#' #colnames(ds1) <- colnames(ds2) <- paste0("col", c(1, 2))
+#' #ds2 <- ds2[rev(seq(1, 5, 1)), c(2, 1)]
 #' # match row and column names
-#' lmatched = matchds(d1, d2, mi1 = "rows", mi2 = "rows")
-#' lmatched = matchds(lmatched[[1]], lmatched[[2]], 
-#'     mi1 = "columns", mi2 = "columns)
+#' #lmatched = matchds(d1, d2, mi1 = "rows", mi2 = "rows")
+#' #lmatched = matchds(lmatched[[1]], lmatched[[2]], 
+#' #    mi1 = "columns", mi2 = "columns)
 #' @export
 matchds_1to2 <- function(ds1, ds2, mi1 = c("rows", "columns"), 
     mi2 = c("rows", "columns"), subset.match = FALSE){
@@ -271,13 +270,13 @@ matchds_1to2 <- function(ds1, ds2, mi1 = c("rows", "columns"),
 #' `data.frame` objects named 'redsignal' and 'greensignal'.
 #' @param verbose Whether to post status messages.
 #' @return Returns a `RGChannelSet` object from raw signal dataset queries.
-#' @examples 
+#' @examples
+#' # notrun :
 #' # get the list of datasets for all probe addresses, 3 samples
-#' gsml = c("GSM1235984", "GSM1236090", "GSM1506278")
-#' ldat = getrg(gsmv = gsml, data.type = "df", metadata = FALSE)
-#' 
+#' # gsml = c("GSM1235984", "GSM1236090", "GSM1506278")
+#' # ldat = getrg(gsmv = gsml, data.type = "df", metadata = FALSE)
 #' # get the rg set object
-#' rg = rgse(ldat)
+#' # rg = rgse(ldat)
 #' @seealso getrg()
 #' @export
 rgse <- function(ldat, verbose = FALSE){
@@ -359,14 +358,13 @@ rgse <- function(ldat, verbose = FALSE){
 #' @return Returns either an `RGChannelSet` or list of 
 #' `data.frame` objects from dataset query matches.
 #' @examples
+#' # notrun:
 #' # make samples list
-#' gsml = c("GSM1235984", "GSM1236090", "GSM1506278")
-#' 
+#' # gsml = c("GSM1235984", "GSM1236090", "GSM1506278")
 #' # get list of data tables for a query
-#' ldat = getrg(gsmv = gsml, data.type = "df")
-#' 
+#' # ldat = getrg(gsmv = gsml, data.type = "df")
 #' # get the RGChannel set object for a query
-#' rgset = getrg(gsmv = gsml, data.type = "se")
+#' # rgset = getrg(gsmv = gsml, data.type = "se")
 #' @seealso rgse()
 #' @export
 getrg <- function(gsmv = NULL, cgv = NULL,

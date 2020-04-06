@@ -31,3 +31,16 @@ A list of the matched datasets.
 Match the character vectors of row or column names 
 for 2 datasets.
 }
+\examples{
+# notrun:
+# make 2 mismatched datasets
+#ds1 <- matrix(seq(1, 10, 1), nrow = 5)
+#ds2 <- matrix(seq(11, 20, 1), nrow = 5)
+#rownames(ds1) <- rownames(ds2) <- paste0("row", seq(1, 5, 1))
+#colnames(ds1) <- colnames(ds2) <- paste0("col", c(1, 2))
+#ds2 <- ds2[rev(seq(1, 5, 1)), c(2, 1)]
+# match row and column names
+#lmatched = matchds(d1, d2, mi1 = "rows", mi2 = "rows")
+#lmatched = matchds(lmatched[[1]], lmatched[[2]], 
+#    mi1 = "columns", mi2 = "columns)
+}

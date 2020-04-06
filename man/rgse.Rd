@@ -20,12 +20,12 @@ Forms an object of `RGChannelSet` class from a signal data object
 returned from a query to the red and green signal tables.
 }
 \examples{
+# notrun :
 # get the list of datasets for all probe addresses, 3 samples
-gsml = c("GSM1235984", "GSM1236090", "GSM1506278")
-ldat = getrg(gsmv = gsml, data.type = "df", metadata = FALSE)
-
+# gsml = c("GSM1235984", "GSM1236090", "GSM1506278")
+# ldat = getrg(gsmv = gsml, data.type = "df", metadata = FALSE)
 # get the rg set object
-rg = rgse(ldat)
+# rg = rgse(ldat)
 }
 \seealso{
 getrg()

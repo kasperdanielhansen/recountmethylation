@@ -2,26 +2,22 @@
 % Please edit documentation in R/accessors.R
 \name{data_mdpost}
 \alias{data_mdpost}
-\title{Retrieve available sample metadata}
+\title{Retrieve HDF5 sample metadata}
 \usage{
 data_mdpost(dbn = "remethdb2.h5", dsn = "mdpost")
 }
 \arguments{
 \item{dbn}{Path to HDF5 database file.}
 
-\item{dsn}{Name or group path to HDF5 dataset containing 
-the sample metadata and learned annotations.}
+\item{dsn}{Name or group path to HDF5 dataset containing sample metadata.}
 }
 \value{
 A `data.frame` of all the sample metadata
 }
 \description{
-Retrieves all sample metadata from an HDF5 database.
+Retrieves sample metadata from HDF5 database.
 }
 \examples{
-# get all available sample metadata
-mdp <- data_mdpost(dbn = "remethdb2.h5", dsn = "mdpost")
-}
-\seealso{
-hread()
+# notrun:
+# mdp <- data_mdpost(dbn = "remethdb2.h5", dsn = "mdpost")
 }
