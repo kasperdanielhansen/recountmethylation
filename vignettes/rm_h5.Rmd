@@ -89,7 +89,7 @@ We can quickly access the entire metadata table for sample queries as follows.
 
 ```{r get_gsm_metadata}
 # get full gsm metadata
-mdp = data.mdpost(dbn, dsn = "mdpost")
+mdp = data_mdpost(dbn, dsn = "mdpost")
 dim(mdp)
 ```
 
