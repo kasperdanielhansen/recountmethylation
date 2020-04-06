@@ -18,7 +18,7 @@ output:
     pdf_document: default
 ---
 
-```{r setup, include = FALSE, eval = TRUE}
+```{r setup, include = FALSE, eval = FALSE}
 library(recountmethylation)
 knitr::opts_chunk$set(eval = TRUE,
     echo = TRUE, warning = FALSE,
