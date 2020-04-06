@@ -1,10 +1,8 @@
 Package: recountmethylation
-Version: 0.01.0
+Version: 0.1
 Title: Access and analyze the Recount Methylation database
-Authors@R: c(person(c("Sean", "K"), "Maden", role = c("cre", "aut"),
-        email = "maden@ohsu.edu"),
-    person("Abhi", "Nellore", role = "aut", email = "nellore@ohsu.edu"),
-    person("Kasper D", "Hansen", role = "aut"))
+Author: "Sean K Maden"
+Maintainer: "Sean K Maden"
 Description: Access and analyze data from the recount methylation database.
 License: Artistic-2.0
 Encoding: UTF-8
