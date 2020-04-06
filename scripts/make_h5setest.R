@@ -2,6 +2,17 @@
 
 # Make test h5se object
 
+#---------------
+# spiracle login
+#---------------
+# ssh maden@acc.ohsu.edu
+# ssh -p 21747 metamaden@96.79.111.125
+# cd recount-methylation/recount-methylation-analysis/files/mdata/compilations/
+
+#---------
+# make test db
+#---------
+
 # filename
 # testfn <- "remethdb_h5se-test_gr"
 # lf <- "remethdb_h5se_gr_00-00-01_1583780004"
@@ -19,8 +30,9 @@
 
 # HDF5Array::saveHDF5SummarizedExperiment(h5se.test.gr, testfn)
 
+#------------------
 # exacloud transfer
-# ssh maden@acc.ohsu.edu
+#------------------
 # ssh exacloud.ohsu.edu
 # cd /home/exacloud/lustre1/CompBio/recount_meth
 # scp -r -P 21747 metamaden@96.79.111.125:/home/metamaden/recount-methylation/recountmethylation_manuscript_supplement ./
