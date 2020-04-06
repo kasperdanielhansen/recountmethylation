@@ -28,34 +28,50 @@ knitr::opts_chunk$set(eval = TRUE,
 
 # Overview
 
-DNAm assay data and sample metadata available as of March 2019 were 
-piped into HDF5-based SummarizedExperiment objects roughly 130Gb in size.
-These files presently include `#filenames`, located at `#link`
+DNAm assay data and sample metadata available as of March 2019 
+were 
+piped into HDF5-based SummarizedExperiment objects between 
+about 80-130Gb in size. The most compact data is the `gr` of 
+class `GenomicRanges`, and the largest object is `rg` of class `RGChannelSet`.
 
-# Download data
+## Download data
 Use `HDF5Array` to 
 H5SE objects were stored using `saveHDF5SummarizedExperiment`
 
 # Query data
 
-The `HDF5-SummarizedExperiment` objects use `DelayedArray` backend,
-which enables rapid querying and delayed execution of memory-intensive processes.
-Use `h5se <- HDF5Array::loadHDF5SummarizedExperiment(path)` where `path` is the path to the
-downloaded `HDF5-SummarizedExperiment` object. Then access metadata using `minfi::pData(h5se)`.
+The `HDF5-SummarizedExperiment` objects use `DelayedArray` 
+backend,
+which enables rapid querying and delayed execution of 
+memory-intensive processes. 
+Use `loadHDF5SummarizedExperiment` from `HDF5Array`, as in 
+`h5se <- loadHDF5SummarizedExperiment(path)`,
+where `path` is the path to the downloaded 
+`HDF5-SummarizedExperiment` object. Then access metadata 
+using `pData` from `minfi`, as in `pData(h5se)`.
 
 # Example with test dataset
 
-First obtain the test data from `recount.bio/data` with `get_rmdl()`, which returns the path we'll use to load the data.
+First obtain the test data from `recount.bio/data` with 
+`get_rmdl()`, which returns the path we'll use to load 
+the data.
 
-```{r, testdat.dl}
+Once data is successfully downloaded, use the returned 
+path to load data into an R session with 
+`loadHDF5SummarizedExperiment()` from `HDF5Array`.
+
+```{r, testdat.dl, echo = TRUE, eval = FALSE}
 datapath <- get_rmdl("h5se-test_gr", verbose = FALSE)
-```
-
-Once data is successfully downloaded, use the returned path to load data into an R session witih `HDF5Array::loadHDF5SummarizedExperiment()` thusly:
-
-```{r, testdat.load, echo = T, eval = F}
 grtest <- HDF5Array::loadHDF5SummarizedExperiment(datapath)
 dim(grtest)
 ```
 
-Data summaries, analysis, and preprocessing can be performed, such as with `minfi`.
+The object `grtest` can then be summarized `dim()` and 
+utilized in an analysis pipeline with `minfi` 
+functions like `pData()`, `getBeta()`, `getAnnotation()` and so forth.
+
+# Session info
+
+```{r, eval = TRUE, echo = TRUE}
+sessionInfo()
+```
