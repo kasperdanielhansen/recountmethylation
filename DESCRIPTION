@@ -19,7 +19,8 @@ Imports:
 Suggests:
     knitr,
     testthat,
-    IlluminaHumanMethylation450kanno.ilmn12.hg19
+    IlluminaHumanMethylation450kanno.ilmn12.hg19,
+    IlluminaHumanMethylation450kmanifest
 VignetteBuilder: knitr
 biocViews: DNAMethylation, Epigenetics, Microarray, MethylationArray
 RoxygenNote: 7.1.0
