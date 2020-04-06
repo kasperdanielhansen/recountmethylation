@@ -18,7 +18,8 @@ Imports:
     RCurl
 Suggests:
     knitr,
-    testthat
+    testthat,
+    IlluminaHumanMethylation450kanno.ilmn12.hg19
 VignetteBuilder: knitr
 biocViews: DNAMethylation, Epigenetics, Microarray, MethylationArray
 RoxygenNote: 7.1.0
