@@ -18,3 +18,10 @@
 # [2] "GSM1038309.1548799666.hlink.GSM1038309_5958154021_R02C01"
 
 # HDF5Array::saveHDF5SummarizedExperiment(h5se.test.gr, testfn)
+
+# exacloud transfer
+# ssh maden@acc.ohsu.edu
+# ssh exacloud.ohsu.edu
+# cd /home/exacloud/lustre1/CompBio/recount_meth
+# scp -r -P 21747 metamaden@96.79.111.125:/home/metamaden/recount-methylation/recountmethylation_manuscript_supplement ./
+  
